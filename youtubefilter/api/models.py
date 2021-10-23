@@ -4,8 +4,6 @@ from dataclasses import dataclass
 from django.contrib.auth.models import User
 
 
-# Create your models here.
-
 class Group(models.Model):
     id = models.UUIDField(unique=True, primary_key=True)
     name = models.CharField(max_length=255)
