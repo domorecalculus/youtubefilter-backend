@@ -8,7 +8,7 @@ class Group(models.Model):
     id = models.UUIDField(unique=True, primary_key=True)
     name = models.CharField(max_length=255)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
-    channels = models.ManyToManyField('Channel')
+    channels = models.ManyToManyField('Channel', blank=True)
 
 class Channel(models.Model):
     id = models.CharField(max_length=255, default="", unique=True, primary_key=True)
