@@ -12,6 +12,14 @@ class Group(models.Model):
 
 class Channel(models.Model):
     id = models.CharField(max_length=255, default="", unique=True, primary_key=True)
-    name = models.CharField(max_length=255, default="")
-    video_ids = ArrayField(base_field=models.CharField(max_length=50))
+    title = models.CharField(max_length=255, default="")
+    description = models.CharField(max_length=1000, default="")
     thumbnail = models.URLField()
+    uploads_playlist_id = models.CharField(max_length=100)
+
+# class Video(models.Model):
+#     id = models.CharField(max_length=50, unique=True, primary_key=True)
+#     title = models.CharField(max_length=100)
+#     thumbnail = models.URLField()
+#     date_published = models.DateTimeField()
+    
